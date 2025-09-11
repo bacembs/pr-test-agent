@@ -16,4 +16,4 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          config.model: gemini-2.5-flash
+          config.model: gemini-1.5-pro
