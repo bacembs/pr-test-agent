@@ -28,3 +28,19 @@ def inefficient_search(data_list, target):
         if data_list[i] == target:
             return i
     return -1
+
+def process_user_data(user_input, admin_password):
+    # SECURITY: Password in plain text comparison
+    if admin_password == "admin123":
+        # SECURITY: SQL injection vulnerability
+        query = f"SELECT * FROM users WHERE name = '{user_input}'"
+        return query
+    return None
+
+def memory_leak_function(data):
+    # PERFORMANCE: Memory leak - list keeps growing
+    global_cache = []
+    for item in data:
+        global_cache.append(item * 2)
+        # BUG: Never clearing the cache
+    return global_cache[-1] if global_cache else None
