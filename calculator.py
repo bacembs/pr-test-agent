@@ -28,3 +28,11 @@ def inefficient_search(data_list, target):
         if data_list[i] == target:
             return i
     return -1
+
+def vulnerable_login(username, password):
+    # CRITICAL SECURITY: Multiple vulnerabilities
+    if password == "password123":  # Hardcoded password
+        user_query = f"SELECT * FROM users WHERE username = '{username}'"  # SQL injection
+        # Missing password hashing, no rate limiting
+        return f"Welcome {username}!"
+    return "Login failed"

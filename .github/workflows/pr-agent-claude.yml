@@ -1,4 +1,4 @@
-name: PR Agent
+name: PR Agent (Claude)
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 jobs:
   pr_agent_job:
     runs-on: ubuntu-latest
-    name: Run PR Agent
+    name: Run PR Agent with Claude
     permissions:
       contents: read
       pull-requests: write
@@ -19,9 +19,9 @@ jobs:
         id: pragent
         uses: Codium-ai/pr-agent@main
         env:
-          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          config.model: gpt-4o-mini
+          config.model: claude-sonnet-4-5
           config.pr_reviewer.num_max_findings: 8
           config.pr_code_suggestions.num_code_suggestions_per_chunk: 5
           config.pr_description.auto_describe: true
