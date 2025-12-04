@@ -40,3 +40,4 @@ jobs:
           config.pr_description.auto_describe: true
           config.pr_reviewer.auto_review: true
           config.pr_code_suggestions.auto_improve: true
+          config.github_action_config.synchronize_action_allowed: true
