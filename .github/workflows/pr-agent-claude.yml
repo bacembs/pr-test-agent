@@ -33,10 +33,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_API_BASE: ${{ secrets.ANTHROPIC_API_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          config.model: anthropic/claude-3-5-sonnet-20240620
-          config.model_turbo: anthropic/claude-3-5-sonnet-20240620
-          config.fallback_models: "['anthropic/claude-3-5-sonnet-20240620']"
-          config.system_prompt: "You are an expert code reviewer. Provide clear, actionable feedback."
+          config.model: claude-3-5-sonnet-20240620
+          config.model_turbo: claude-3-5-sonnet-20240620
+          config.fallback_models: "['claude-3-5-sonnet-20240620']"
+          config.custom_model_max_tokens: 32000
           config.pr_reviewer.num_max_findings: 8
           config.pr_code_suggestions.num_code_suggestions_per_chunk: 5
           config.pr_description.auto_describe: true
