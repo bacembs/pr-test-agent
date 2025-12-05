@@ -32,9 +32,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          config.model: anthropic/claude-3-5-sonnet-20241022
-          config.model_turbo: anthropic/claude-3-5-sonnet-20241022
-          config.fallback_models: "['anthropic/claude-3-5-sonnet-20241022']"
+          config.model: anthropic/claude-haiku-4-5-20251001
+          config.model_turbo: anthropic/claude-haiku-4-5-20251001
+          config.fallback_models: "['anthropic/claude-haiku-4-5-20251001']"
           config.pr_reviewer.num_max_findings: 8
           config.pr_code_suggestions.num_code_suggestions_per_chunk: 5
           config.pr_description.auto_describe: true
