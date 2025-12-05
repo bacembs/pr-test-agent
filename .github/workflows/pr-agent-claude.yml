@@ -31,6 +31,7 @@ jobs:
         uses: qodo-ai/pr-agent@main
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_BASE: ${{ secrets.ANTHROPIC_API_URL }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           config.model: anthropic/claude-3-5-sonnet-20241022
           config.model_turbo: anthropic/claude-3-5-sonnet-20241022
