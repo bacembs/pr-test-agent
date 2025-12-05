@@ -22,8 +22,8 @@ jobs:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           config.model: gpt-4o-mini
-          config.pr_reviewer.num_max_findings: 8
-          config.pr_code_suggestions.num_code_suggestions_per_chunk: 5
+          config.pr_reviewer.num_max_findings: -1
+          config.pr_code_suggestions.num_code_suggestions_per_chunk: -1
           config.pr_description.auto_describe: true
           config.pr_reviewer.auto_review: true
           config.pr_code_suggestions.auto_improve: true
